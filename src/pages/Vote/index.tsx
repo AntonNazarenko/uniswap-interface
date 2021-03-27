@@ -9,7 +9,6 @@ import { ButtonPrimary } from '../../components/Button'
 
 import { Button } from 'rebass/styled-components'
 import { darken } from 'polished'
-import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
 import { useAllProposalData, ProposalData, useUserVotes, useUserDelegatee } from '../../state/governance/hooks'
 import DelegateModal from '../../components/vote/DelegateModal'
 import { useTokenBalance } from '../../state/wallet/hooks'
@@ -59,15 +58,10 @@ const ProposalTitle = styled.span`
   font-weight: 600;
 `
 
-const VoteCard = styled(DataCard)`
-  background: radial-gradient(76.02% 75.41% at 1.84% 0%, #27ae60 0%, #000000 100%);
-  overflow: hidden;
-`
-
 const WrapSmall = styled(RowBetween)`
   ${({ theme }) => theme.mediaWidth.upToSmall`
     flex-wrap: wrap;
-  
+
   `};
 `
 
@@ -129,34 +123,6 @@ export default function Vote() {
         onDismiss={toggleDelegateModal}
         title={showUnlockVoting ? 'Unlock Votes' : 'Update Delegation'}
       />
-      <TopSection gap="md">
-        <VoteCard>
-          <CardBGImage />
-          <CardNoise />
-          <CardSection>
-            <AutoColumn gap="md">
-              <RowBetween>
-                <TYPE.white fontWeight={600}>Uniswap Governance</TYPE.white>
-              </RowBetween>
-              <RowBetween>
-                <TYPE.white fontSize={14}>
-                  UNI tokens represent voting shares in Uniswap governance. You can vote on each proposal yourself or
-                  delegate your votes to a third party.
-                </TYPE.white>
-              </RowBetween>
-              <ExternalLink
-                style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://uniswap.org/blog/uni"
-                target="_blank"
-              >
-                <TYPE.white fontSize={14}>Read more about Uniswap governance</TYPE.white>
-              </ExternalLink>
-            </AutoColumn>
-          </CardSection>
-          <CardBGImage />
-          <CardNoise />
-        </VoteCard>
-      </TopSection>
       <TopSection gap="2px">
         <WrapSmall>
           <TYPE.mediumHeader style={{ margin: '0.5rem 0.5rem 0.5rem 0', flexShrink: 0 }}>Proposals</TYPE.mediumHeader>

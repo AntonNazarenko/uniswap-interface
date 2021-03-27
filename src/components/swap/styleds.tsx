@@ -25,8 +25,7 @@ export const ArrowWrapper = styled.div<{ clickable: boolean }>`
 `
 export const Chart = styled.div`
   width: 100%;
-  height: 100%;
-  border: 1px solid yellow;
+  height: 85%;
 `
 export const SectionBreak = styled.div`
   height: 1px;

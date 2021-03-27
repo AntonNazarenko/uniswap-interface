@@ -54,8 +54,11 @@ import { RouteComponentProps } from 'react-router-dom'
 import Pool from '../Pool'
 import Vote from '../Vote'
 
+import ExchangeInfoBar from '../../components/ExchangeInfoBar'
+
 export default function Swap({ history }: RouteComponentProps) {
   const loadedUrlParams = useDefaultsFromURLSearch()
+const CHART_URL = 'https://bitfinexcom.github.io/bfx-hf-tradingview'
 
   // token warning stuff
   const [loadedInputCurrency, loadedOutputCurrency] = [
@@ -531,7 +534,17 @@ export default function Swap({ history }: RouteComponentProps) {
           width: '100%',
           display: 'block',
         }}>
-          <Chart />
+          <ExchangeInfoBar />
+          <Chart>
+            <iframe
+              src={`${CHART_URL}/?wsID=tBTCUSD&base=BTC&quote=USD`}
+              title='thumbnails'
+              frameBorder='0'
+              style={{
+                width: '100%',
+                height: '100%',
+              }} />
+          </Chart>
         </div>
       </div>
       <Vote />
