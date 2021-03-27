@@ -276,9 +276,7 @@ const BackArrowLink = styled(StyledInternalLink)`
 `
 export function BackArrow({ to }: { to: string }) {
   return (
-    <BackArrowLink to={to}>
-      <ArrowLeft />
-    </BackArrowLink>
+    <></>
   )
 }
 
