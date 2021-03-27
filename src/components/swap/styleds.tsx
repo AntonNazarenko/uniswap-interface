@@ -54,7 +54,7 @@ export const StyledBalanceMaxMini = styled.button`
   width: 22px;
   background-color: ${({ theme }) => theme.bg2};
   border: none;
-  border-radius: 50%;
+  border-radius-disable: 50%;
   padding: 0.2rem;
   font-size: 0.875rem;
   font-weight: 400;
@@ -105,7 +105,7 @@ export const Dots = styled.span`
 
 const SwapCallbackErrorInner = styled.div`
   background-color: ${({ theme }) => transparentize(0.9, theme.red1)};
-  border-radius: 1rem;
+  border-radius-disable: 1rem;
   display: flex;
   align-items: center;
   font-size: 0.825rem;
@@ -127,7 +127,7 @@ const SwapCallbackErrorInnerAlertTriangle = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 12px;
-  border-radius: 12px;
+  border-radius-disable: 12px;
   min-width: 48px;
   height: 48px;
 `
@@ -147,7 +147,7 @@ export const SwapShowAcceptChanges = styled(AutoColumn)`
   background-color: ${({ theme }) => transparentize(0.9, theme.primary1)};
   color: ${({ theme }) => theme.primary1};
   padding: 0.5rem;
-  border-radius: 12px;
+  border-radius-disable: 12px;
   margin-top: 8px;
 `
 export const Separator = styled.div`

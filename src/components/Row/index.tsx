@@ -16,7 +16,7 @@ const Row = styled(Box)<{
   justify-content: ${({ justify }) => justify ?? 'flex-start'};
   padding: ${({ padding }) => padding};
   border: ${({ border }) => border};
-  border-radius: ${({ borderRadius }) => borderRadius};
+  border-radius-disable: ${({ borderRadius }) => borderRadius};
 `
 
 export const RowBetween = styled(Row)`

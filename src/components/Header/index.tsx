@@ -75,7 +75,7 @@ const HeaderControls = styled.div`
     width: 100%;
     z-index: 99;
     height: 72px;
-    border-radius: 12px 12px 0 0;
+    border-radius-disable: 12px 12px 0 0;
     background-color: ${({ theme }) => theme.bg1};
   `};
 `
@@ -119,7 +119,7 @@ const AccountElement = styled.div<{ active: boolean }>`
   flex-direction: row;
   align-items: center;
   background-color: ${({ theme, active }) => (!active ? theme.bg1 : theme.bg3)};
-  border-radius: 12px;
+  border-radius-disable: 12px;
   white-space: nowrap;
   width: 100%;
   cursor: pointer;
@@ -159,7 +159,7 @@ const HideSmall = styled.span`
 `
 
 const NetworkCard = styled(YellowCard)`
-  border-radius: 12px;
+  border-radius-disable: 12px;
   padding: 8px 12px;
   ${({ theme }) => theme.mediaWidth.upToSmall`
     margin: 0;
@@ -205,7 +205,7 @@ const StyledNavLink = styled(NavLink).attrs({
 })`
   ${({ theme }) => theme.flexRowNoWrap}
   align-items: left;
-  border-radius: 3rem;
+  border-radius-disable: 3rem;
   outline: none;
   cursor: pointer;
   text-decoration: none;
@@ -216,7 +216,7 @@ const StyledNavLink = styled(NavLink).attrs({
   font-weight: 500;
 
   &.${activeClassName} {
-    border-radius: 12px;
+    border-radius-disable: 12px;
     font-weight: 600;
     color: ${({ theme }) => theme.text1};
   }
@@ -232,7 +232,7 @@ const StyledExternalLink = styled(ExternalLink).attrs({
 })<{ isActive?: boolean }>`
   ${({ theme }) => theme.flexRowNoWrap}
   align-items: left;
-  border-radius: 3rem;
+  border-radius-disable: 3rem;
   outline: none;
   cursor: pointer;
   text-decoration: none;
@@ -243,7 +243,7 @@ const StyledExternalLink = styled(ExternalLink).attrs({
   font-weight: 500;
 
   &.${activeClassName} {
-    border-radius: 12px;
+    border-radius-disable: 12px;
     font-weight: 600;
     color: ${({ theme }) => theme.text1};
   }
@@ -270,7 +270,7 @@ export const StyledMenuButton = styled.button`
   background-color: ${({ theme }) => theme.bg3};
   margin-left: 8px;
   padding: 0.15rem 0.5rem;
-  border-radius: 0.5rem;
+  border-radius-disable: 0.5rem;
 
   :hover,
   :focus {
