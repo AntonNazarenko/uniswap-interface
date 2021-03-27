@@ -316,7 +316,7 @@ export default function Header() {
   const countUpValue = aggregateBalance?.toFixed(0) ?? '0'
   const countUpValuePrevious = usePrevious(countUpValue) ?? '0'
 
-  const removeNavbar = /swap|create|add/.test(window.location.hash)
+  const removeNavbar = /swap|create|add|uni/.test(window.location.hash)
 
   return removeNavbar ? <></> : (
     <HeaderFrame>

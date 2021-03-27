@@ -5,7 +5,7 @@ import { TYPE, CloseIcon } from 'theme'
 import Card from 'components/Card'
 import { AutoColumn } from 'components/Column'
 import { RowBetween, RowFixed, AutoRow } from 'components/Row'
-import { ArrowLeft, AlertTriangle } from 'react-feather'
+import { AlertTriangle } from 'react-feather'
 import useTheme from 'hooks/useTheme'
 import { transparentize } from 'polished'
 import { ButtonPrimary } from 'components/Button'
@@ -79,7 +79,6 @@ export function ImportList({ listURL, list, setModalView, onDismiss }: ImportPro
     <Wrapper>
       <PaddedColumn gap="14px" style={{ width: '100%', flex: '1 1' }}>
         <RowBetween>
-          <ArrowLeft style={{ cursor: 'pointer' }} onClick={() => setModalView(CurrencyModalView.manage)} />
           <TYPE.mediumHeader>Import List</TYPE.mediumHeader>
           <CloseIcon onClick={onDismiss} />
         </RowBetween>

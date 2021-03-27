@@ -6,7 +6,6 @@ import { RouteComponentProps } from 'react-router-dom'
 import { TYPE, StyledInternalLink, ExternalLink } from '../../theme'
 import { RowFixed, RowBetween } from '../../components/Row'
 import { CardSection, DataCard } from '../../components/earn/styled'
-import { ArrowLeft } from 'react-feather'
 import { ButtonPrimary } from '../../components/Button'
 import { ProposalStatus } from './styled'
 import { useProposalData, useUserVotesAsOfBlock, ProposalData, useUserDelegatee } from '../../state/governance/hooks'
@@ -178,9 +177,6 @@ export default function VotePage({
       <DelegateModal isOpen={showDelegateModal} onDismiss={toggleDelegateModal} title="Unlock Votes" />
       <ProposalInfo gap="lg" justify="start">
         <RowBetween style={{ width: '100%' }}>
-          <ArrowWrapper to="/vote">
-            <ArrowLeft size={20} /> All Proposals
-          </ArrowWrapper>
           {proposalData && <ProposalStatus status={proposalData?.status ?? ''}>{proposalData?.status}</ProposalStatus>}
         </RowBetween>
         <AutoColumn gap="10px" style={{ width: '100%' }}>
