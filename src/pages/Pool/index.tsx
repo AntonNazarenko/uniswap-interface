@@ -21,7 +21,7 @@ import { useStakingInfo } from '../../state/stake/hooks'
 import { BIG_INT_ZERO } from '../../constants'
 
 const PageWrapper = styled(AutoColumn)`
-  max-width: 420px;
+  max-width: 600px;
   width: 100%;
 `
 

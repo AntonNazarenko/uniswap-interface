@@ -312,9 +312,12 @@ export default function Swap({ history }: RouteComponentProps) {
         onDismiss={handleDismissTokenWarning}
       />
       <SwapPoolTabs active={'swap'} />
-      <div className='page-container'>
-        <div className='sidemenu'>
-        <Pool />
+      <div className='page-container' style={{
+        display: 'flex',
+        marginBottom: '10px',
+      }}>
+        <div className='sidemenu' style={{ width: '580px', marginRight: '10px' }}>
+          <Pool />
           <AppBody>
             <SwapHeader />
             <Wrapper id="swap-page">
@@ -524,11 +527,14 @@ export default function Swap({ history }: RouteComponentProps) {
             </Wrapper>
           </AppBody>
         </div>
-        <div className='content'>
+        <div className='content' style={{
+          width: '100%',
+          display: 'block',
+        }}>
           <Chart />
-          <Vote />
         </div>
       </div>
+      <Vote />
       {!swapIsUnsupported ? (
         <AdvancedSwapDetailsDropdown trade={trade} />
       ) : (
